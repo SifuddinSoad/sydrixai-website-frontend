@@ -1,0 +1,739 @@
+/* AI Exam System Detail Page Styles */
+.aiExamSystem {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+  min-height: 80vh;
+}
+
+.heroContent {
+  animation: fadeInUp 1s ease-out;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(139, 69, 19, 0.1);
+  color: #8b4513;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.badgeIcon {
+  font-size: 0.75rem;
+}
+
+.title {
+  margin-bottom: 1.2rem;
+}
+
+.titleMain {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a202c;
+  line-height: 1.1;
+}
+
+.titleSub {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.description {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 1.4rem;
+  max-width: 90%;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.primaryBtn:hover {
+  box-shadow: 0 10px 35px rgba(139, 69, 19, 0.6);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  color: #8b4513;
+  padding: 1rem 2rem;
+  border: 2px solid #8b4513;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: #8b4513;
+  color: white;
+  box-shadow: 0 8px 30px rgba(139, 69, 19, 0.5);
+}
+
+.btnIcon {
+  font-size: 0.75rem;
+}
+
+/* Hero Visual - Exam Interface */
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.examInterface {
+  background: white;
+  border-radius: 25px;
+  padding: 1.2rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.examHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.examTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.examTimer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(139, 69, 19, 0.1);
+  color: #8b4513;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.timeIcon {
+  font-size: 0.75rem;
+}
+
+.timeRemaining {
+  font-size: 0.75rem;
+}
+
+.questionCard {
+  background: #f8fafc;
+  border-radius: 15px;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.questionNumber {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.questionText {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.option {
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.option:hover {
+  border-color: #8b4513;
+  background: rgba(139, 69, 19, 0.05);
+}
+
+.option.selected {
+  border-color: #8b4513;
+  background: rgba(139, 69, 19, 0.1);
+  color: #8b4513;
+}
+
+.examProgress {
+  margin-bottom: 1.2rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressFill {
+  width: 37.5%;
+  height: 100%;
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  border-radius: 4px;
+  animation: progressAnimation 2s ease-out;
+}
+
+.progressText {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.examControls {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.controlBtn {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  background: white;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.75rem;
+}
+
+.controlBtn:hover {
+  border-color: #8b4513;
+  background: rgba(139, 69, 19, 0.05);
+}
+
+.nextBtn {
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  color: white;
+  border-color: #8b4513;
+}
+
+.nextBtn:hover {
+  background: linear-gradient(135deg, #a0522d 0%, #8b4513 100%);
+}
+
+/* Section Titles */
+.sectionTitle {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  border-radius: 2px;
+}
+
+/* Features Section */
+.featuresSection {
+  padding: 3rem 0;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.featureCard {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.featureCard:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.featureIcon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.featureTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.featureDesc {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Exam Types Section */
+.examTypesSection {
+  padding: 3rem 3rem;
+  background: rgba(139, 69, 19, 0.05);
+  border-radius: 30px;
+  margin: 2rem 0;
+}
+
+.examTypesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.examTypeCard {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.examTypeCard:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.examTypeIcon {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.examTypeTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.examTypeDesc {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.examFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.featureTag {
+  background: rgba(139, 69, 19, 0.1);
+  color: #8b4513;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Analysis Section */
+.analysisSection {
+  padding: 3rem 0;
+}
+
+.analysisPreview {
+  background: white;
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.scoreCard {
+  background: #f8fafc;
+  border-radius: 15px;
+  padding: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.overallScore {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.scoreNumber {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #8b4513;
+}
+
+.scoreLabel {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.scoreBreakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subjectScore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid #8b4513;
+}
+
+.subject {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.score {
+  font-weight: 700;
+  color: #8b4513;
+}
+
+.weaknessAnalysis h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.weaknessList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.weaknessItem {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weaknessTitle {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.weaknessPercentage {
+  font-weight: 600;
+  color: #ef4444;
+  font-size: 0.75rem;
+}
+
+.recommendations h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.2rem;
+}
+
+.recommendationList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recommendationItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.recommendationIcon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.recommendationText {
+  font-size: 0.75rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* Benefits Section */
+.benefitsSection {
+  padding: 3rem 0;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.benefitItem:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.checkIcon {
+  color: #22c55e;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 3rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  border-radius: 30px;
+  color: white;
+  margin: 2rem 0;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.ctaDesc {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+  opacity: 0.9;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  color: #8b4513;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaBtn:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 37.5%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .titleMain,
+  .titleSub {
+    font-size: 1.6rem;
+  }
+
+  .analysisPreview {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .titleMain,
+  .titleSub {
+    font-size: 1.7rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.7rem;
+  }
+
+  .examInterface {
+    padding: 1.2rem;
+  }
+
+  .examControls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleMain,
+  .titleSub {
+    font-size: 1.3rem;
+  }
+
+  .examHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .subjectScore {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

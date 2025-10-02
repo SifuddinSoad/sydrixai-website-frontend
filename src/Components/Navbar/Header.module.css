@@ -1,0 +1,226 @@
+.menuItem.active {
+  color: #3366ff;
+  box-shadow: 2px 2px 8px rgba(0, 115, 187, 0.212);
+}
+.menuItem.active::after {
+  width: 100%;
+  background: #3366ff;
+}
+.authBtn {
+  background: #fff;
+  color: #3366ff;
+  border: 2px solid #3366ff;
+  border-radius: 10px;
+  padding: 0.9375rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.authBtn:hover {
+  background: #254edb;
+  color: #e6e6e6;
+  border-color: #254edb;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 115, 187, 0.212);
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoIcon {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+  margin-right: 0.75rem;
+  border-radius: 6px;
+}
+
+.logoText {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 2px;
+}
+
+.menuSection {
+  background: #4a4a4a0a;
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem 2rem;
+  border: 1px solid #64646436;
+  border-radius: 10px;
+}
+
+.menuItem {
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+}
+.menuItem::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #3366ff;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menuItem:hover {
+  background: #ffffff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #2196f3;
+}
+.menuItem:hover::after {
+  width: 100%;
+}
+
+.buttonSection {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #3366ff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.hamburger:hover {
+  background: #f6f8fa;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 200;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.mobileMenuOpen {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileMenuSection {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.mobileMenuItem {
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 6px;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobileMenuItem:hover {
+  background: #f6f8fa;
+  color: #3366ff;
+}
+
+.mobileMenuItem.active {
+  color: #3366ff;
+  background: #f6f8fa;
+}
+
+.mobileButtonSection {
+  padding: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.mobileAuthBtn {
+  display: block;
+  text-align: center;
+  background: #3366ff;
+  color: #fff;
+  border: 2px solid #3366ff;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mobileAuthBtn:hover {
+  background: #254edb;
+  border-color: #254edb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menuSection,
+  .buttonSection {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .header {
+    padding: 0.75rem 1rem;
+  }
+}
+
+.loginBtn,
+.signupBtn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}

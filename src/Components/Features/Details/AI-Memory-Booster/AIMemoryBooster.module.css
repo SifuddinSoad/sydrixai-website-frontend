@@ -1,0 +1,596 @@
+/* AI Memory Booster Detail Page Styles */
+.aiMemory {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+  min-height: 80vh;
+}
+
+.heroContent {
+  animation: fadeInUp 1s ease-out;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.badgeIcon {
+  font-size: 0.75rem;
+}
+
+.title {
+  margin-bottom: 1.2rem;
+}
+
+.titleMain {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a202c;
+  line-height: 1.1;
+}
+
+.titleSub {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.description {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 1.4rem;
+  max-width: 90%;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.primaryBtn:hover {
+  box-shadow: 0 10px 35px rgba(99, 102, 241, 0.6);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  color: #6366f1;
+  padding: 1rem 2rem;
+  border: 2px solid #6366f1;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: #6366f1;
+  color: white;
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+}
+
+.btnIcon {
+  font-size: 0.75rem;
+}
+
+/* Hero Visual - Memory Interface */
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.memoryInterface {
+  background: white;
+  border-radius: 25px;
+  padding: 1.2rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.brainVisualization {
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+
+.brainIcon {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.memoryNodes {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.node {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: white;
+  animation: pulse 2s infinite var(--delay);
+}
+
+.memoryTechniques {
+  background: #f8fafc;
+  border-radius: 15px;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.memoryTechniques h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.techniqueList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.techniqueItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.techniqueIcon {
+  font-size: 0.75rem;
+}
+
+.memoryStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.statBox {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.statValue {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #6366f1;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* Section Titles */
+.sectionTitle {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border-radius: 2px;
+}
+
+/* Features Section */
+.featuresSection {
+  padding: 3rem 0;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.featureCard {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.featureCard:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.featureIcon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.featureTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.featureDesc {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Techniques Section */
+.techniquesSection {
+  padding: 3rem;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 30px;
+  margin: 2rem 0;
+}
+
+.techniquesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.techniqueCard {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.techniqueCard:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.techniqueHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.techniqueHeader .techniqueIcon {
+  font-size: 1.7rem;
+}
+
+.techniqueHeader h3 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.techniqueDesc {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.techniqueSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.step {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Games Section */
+.gamesSection {
+  padding: 3rem 0;
+}
+
+.gamesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.gameCard {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gameCard:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.gameIcon {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.gameCard h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.gameCard p {
+  font-size: 0.75rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* Benefits Section */
+.benefitsSection {
+  padding: 3rem 0;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.benefitItem:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.checkIcon {
+  color: #22c55e;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 3rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border-radius: 30px;
+  color: white;
+  margin: 2rem 0;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.ctaDesc {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+  opacity: 0.9;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  color: #6366f1;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaBtn:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .titleMain,
+  .titleSub {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .titleMain,
+  .titleSub {
+    font-size: 1.7rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.7rem;
+  }
+
+  .memoryInterface {
+    padding: 1.2rem;
+  }
+
+  .memoryNodes {
+    justify-content: space-between;
+  }
+
+  .node {
+    width: 35px;
+    height: 35px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleMain,
+  .titleSub {
+    font-size: 1.5rem;
+  }
+
+  .brainIcon {
+    font-size: 1.6rem;
+  }
+
+  .memoryStats {
+    grid-template-columns: 1fr;
+  }
+
+  .techniqueHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+}

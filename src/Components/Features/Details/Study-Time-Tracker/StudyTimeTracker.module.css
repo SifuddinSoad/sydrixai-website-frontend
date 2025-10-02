@@ -1,0 +1,792 @@
+/* Study Time Tracker Detail Page Styles */
+.studyTracker {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem 0;
+  min-height: 80vh;
+}
+
+.heroContent {
+  animation: fadeInUp 1s ease-out;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 87, 34, 0.1);
+  color: #ff5722;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(255, 87, 34, 0.2);
+}
+
+.badgeIcon {
+  font-size: 0.75rem;
+}
+
+.title {
+  margin-bottom: 1.2rem;
+}
+
+.titleMain {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a202c;
+  line-height: 1.1;
+}
+
+.titleSub {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.description {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 1.8rem;
+  max-width: 90%;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 87, 34, 0.4);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  color: #ff5722;
+  padding: 1rem 2rem;
+  border: 2px solid #ff5722;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: #ff5722;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btnIcon {
+  font-size: 0.8rem;
+}
+
+/* Hero Visual - Timer Interface */
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.timerInterface {
+  background: white;
+  border-radius: 30px;
+  padding: 2rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timerDisplay {
+  position: relative;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+}
+
+.timeCircle {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeText {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.timeLabel {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.progressRing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.progressSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progressBackground {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 6;
+}
+
+.progressBar {
+  fill: none;
+  stroke: #ff5722;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 534;
+  stroke-dashoffset: 160;
+  animation: progressAnimation 3s ease-in-out infinite;
+}
+
+.timerControls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.controlBtn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.2);
+}
+
+.controlBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.3);
+}
+
+.quickStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.statItem {
+  text-align: center;
+  padding: 1.2rem 0.8rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.statValue {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ff5722;
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.65rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Section Titles */
+.sectionTitle {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 2.2rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+  border-radius: 2px;
+}
+
+/* Features Section */
+.featuresSection {
+  padding: 4rem 0;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 87, 34, 0.1);
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.featureIcon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.featureTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.featureDesc {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Study Habits Section */
+.habitsSection {
+  padding: 3rem;
+  background: rgba(255, 87, 34, 0.05);
+  border-radius: 30px;
+  margin: 2rem 0;
+}
+
+.habitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.habitCard {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.habitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.habitIcon {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.habitTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.habitDesc {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.habitFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.featureTag {
+  background: rgba(255, 87, 34, 0.1);
+  color: #ff5722;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+/* Benefits Section */
+.benefitsSection {
+  padding: 4rem 0;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.benefitItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.checkIcon {
+  color: #22c55e;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Dashboard Preview Section */
+.dashboardSection {
+  padding: 4rem 0;
+}
+
+.dashboardPreview {
+  background: white;
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.dashboardMain {
+  background: #f8fafc;
+  border-radius: 15px;
+  padding: 1.2rem;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.dashboardHeader h3 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.todayDate {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.dashboardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeDisplay {
+  text-align: center;
+}
+
+.totalTime {
+  margin-bottom: 1.2rem;
+}
+
+.timeNumber {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ff5722;
+}
+
+.timeLabel {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.goalProgress {
+  margin: 1rem 0;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressFill {
+  width: 87%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+  border-radius: 4px;
+  animation: progressFillAnimation 2s ease-out;
+}
+
+.progressText {
+  font-size: 0.65rem;
+  color: #6b7280;
+}
+
+.subjectBreakdown h4 {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.subjectList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.subjectItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid #ff5722;
+}
+
+.subjectName {
+  font-weight: 500;
+  color: #1a202c;
+}
+
+.subjectTime {
+  font-weight: 600;
+  color: #ff5722;
+}
+
+.statsPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.statCard {
+  background: #f8fafc;
+  border-radius: 15px;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.statIcon {
+  font-size: 1.7rem;
+}
+
+.statInfo {
+  flex: 1;
+}
+
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ff5722;
+}
+
+.statTitle {
+  font-size: 0.65rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 4rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+  border-radius: 30px;
+  color: white;
+  margin: 2rem 0;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.ctaDesc {
+  font-size: 0.65rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  color: #ff5722;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+.ctaBtn:hover .arrowIcon {
+  transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes progressAnimation {
+  0% {
+    stroke-dashoffset: 283;
+  }
+  100% {
+    stroke-dashoffset: 85;
+  }
+}
+
+@keyframes progressFillAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 87%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .titleMain,
+  .titleSub {
+    font-size: 1.6rem;
+  }
+
+  .dashboardPreview {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .titleMain,
+  .titleSub {
+    font-size: 1.7rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.7rem;
+  }
+
+  .timerInterface {
+    padding: 1.2rem;
+  }
+
+  .timeText {
+    font-size: 1.8rem;
+  }
+
+  .quickStats {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .dashboardPreview {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleMain,
+  .titleSub {
+    font-size: 1.8rem;
+  }
+
+  .timeText {
+    font-size: 1.5rem;
+  }
+
+  .progressRing {
+    width: 120px;
+    height: 120px;
+  }
+
+  .controlBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.75rem;
+  }
+}
