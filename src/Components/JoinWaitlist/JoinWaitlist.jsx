@@ -157,9 +157,7 @@ const JoinWaitlist = () => {
               <NavLink to="/" className={styles.homeButton}>
                 হোমে ফিরে যান
               </NavLink>
-              <button className={styles.shareButton}>
-                বন্ধুদের সাথে শেয়ার করুন
-              </button>
+           
             </div>
           </div>
         </div>
@@ -343,3 +341,4 @@ const JoinWaitlist = () => {
 };
 
 export default JoinWaitlist;
+
