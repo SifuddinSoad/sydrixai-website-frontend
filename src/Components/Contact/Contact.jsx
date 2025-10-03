@@ -111,7 +111,7 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       title: "ইমেইল",
-      value: "sydrixai@gmail.com",
+      value: "contract.us@sydrixai.com",
       description: "যেকোনো প্রশ্নের জন্য আমাদের ইমেইল করুন",
     },
     {
@@ -351,3 +351,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
