@@ -37,7 +37,6 @@ const About = () => {
   const stats = [
     { number: "৯৫%", label: "সফলতার হার", icon: FaGraduationCap },
     { number: "২৪/৭", label: "সাপোর্ট", icon: FaBrain },
-    { number: "১০০+", label: "কোর্স", icon: FaLightbulb },
   ];
 
   return (
@@ -229,4 +228,5 @@ const About = () => {
 };
 
 export default About;
+
 
