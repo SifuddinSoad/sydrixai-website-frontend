@@ -58,14 +58,14 @@ const JoinWaitlist = () => {
         throw new Error("ফোন নম্বর প্রয়োজন");
       }
 
-      console.log("Submitting form data:", formData);
+      
 
       // Submit to API
       const result = await apiServices.registerUser(formData);
 
       if (result.success) {
         setIsSubmitted(true);
-        console.log("Registration successful:", result.data);
+        
       }
     } catch (error) {
       console.error("Registration error:", error);
@@ -341,4 +341,5 @@ const JoinWaitlist = () => {
 };
 
 export default JoinWaitlist;
+
 
