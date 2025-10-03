@@ -35,7 +35,6 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "১০,০০০+", label: "শিক্ষার্থী", icon: FaUsers },
     { number: "৯৫%", label: "সফলতার হার", icon: FaGraduationCap },
     { number: "২৪/৭", label: "সাপোর্ট", icon: FaBrain },
     { number: "১০০+", label: "কোর্স", icon: FaLightbulb },
@@ -230,3 +229,4 @@ const About = () => {
 };
 
 export default About;
+
