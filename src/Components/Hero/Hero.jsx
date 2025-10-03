@@ -33,13 +33,7 @@ const Hero = () => {
           </p>
 
           <div className={styles.heroStats}>
-            <div className={styles.stat}>
-              <FaGraduationCap className={styles.statIcon} />
-              <div className={styles.statInfo}>
-                <span className={styles.statNumber}>10K+</span>
-                <span className={styles.statLabel}>শিক্ষার্থী</span>
-              </div>
-            </div>
+      
             <div className={styles.stat}>
               <FaBrain className={styles.statIcon} />
               <div className={styles.statInfo}>
@@ -122,3 +116,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
