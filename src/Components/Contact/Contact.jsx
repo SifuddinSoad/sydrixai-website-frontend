@@ -117,7 +117,7 @@ const Contact = () => {
     {
       icon: FaPhone,
       title: "ফোন",
-      value: "+88017 96313920",
+      value: "+8801624691402",
       description: "সরাসরি কথা বলতে আমাদের কল করুন",
     },
     {
@@ -351,4 +351,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
